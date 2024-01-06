@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 공부</title>
+  </head>
+  <body>
+    <!-- form : 정보를 제출하기 위한 포맷들을 포함하는 문서 구획을 나타냄 -->
+    <!-- autocomplete : 해당 폼 내부 input 등 작성 시 자동완성 기능, 기본값 true -->
+    <form action="./01-result.html" method="get" autocomplete="false">
+      <!-- label : 해당 텍스트와 입력창의 관계를 이어줌
+      label 을 할 경우의 장점 : 텍스트 부분을 눌러도 입력창으로 커서가 자동 이동 
+      name : HTML 에서의 의미 X, 서버에서 값을 받을 때의 이름을 지정 -->
+      <label for="name">이름</label>
+      <input id="name" name="my-name" type="text" />
+      <br /><br />
+
+      <label for="age">나이</label>
+      <input id="age" name="my-age" type="number" />
+      <br /><br />
+      <!-- submit : input 의 내용을 form 의 정보를 받는 서버나 주소로 보내는데 사용
+      reset : input 창의 값들을 초기화 함
+      button : JS 등으로 새로운 기능을 추가할 때 사용 -->
+      <button type="submit">제출</button>
+      <button type="reset">초기화</button>
+      <button type="button">버튼</button>
+    </form>
+    <br />
+    <form>
+      <!-- fieldset : 원하는 요소들을 묶을 수 있는 태그 -->
+      <fieldset>
+        <!-- legend : fieldset 의 이름이나 설명을 달 수 있음 -->
+        <legend>반장</legend>
+        <label for="name_1">이름</label>
+        <input id="name_1" name="name_1" type="text" />
+        <br /><br />
+        <label for="age_1">나이</label>
+        <input type="number" name="age_1" id="age_1" />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>부반장</legend>
+        <label for="name_2">이름</label>
+        <input type="text" name="name_2" id="name_2" />
+        <br /><br />
+        <label for="age_2">나이</label>
+        <input type="number" name="age_2" id="age_2" />
+      </fieldset>
+      <br />
+      <!-- fieldset 으로 묶는 이유 : 각각의 요소들을 편하게 관리 가능
+      disabled 옵션으로 입력 창 비활성화 가능 -->
+      <fieldset disabled>
+        <legend>서기</legend>
+        <label for="name_3">이름</label>
+        <input type="text" name="name_3" id="name_3" />
+        <br /><br />
+        <label for="age_3">나이</label>
+        <input type="number" name="age_3" id="age_3" />
+      </fieldset>
+    </form>
+  </body>
+</html>
