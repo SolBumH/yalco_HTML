@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://showcases.yalco.kr/html-css/01-06/table.css"
+    />
+    <!-- yalco 가 제공해주는 css -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 만들기</title>
+  </head>
+  <body>
+    <table>
+      <!-- 표의 객체를 감싸는 태그 -->
+      <caption>
+        1 부터 9 까지 숫자
+      </caption>
+      <!-- 표의 제목 -->
+      <tr>
+        <!-- 행 -->
+        <td>1</td>
+        <!-- 열 -->
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+    <br />
+    <table>
+      <caption>
+        HTML 공부
+      </caption>
+      <thead>
+        <tr>
+          <!-- scope="col" : 열, scope="row" : 행 -->
+          <th scope="col">과목</th>
+          <th scope="col">월</th>
+          <th scope="col">화</th>
+          <th scope="col">수</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">HTML</th>
+          <td>60분</td>
+          <td>60분</td>
+          <td>0분</td>
+        </tr>
+        <tr>
+          <th scope="row">CSS</th>
+          <td>0분</td>
+          <td>30분</td>
+          <td>60분</td>
+        </tr>
+        <tr>
+          <th scope="row">JS</th>
+          <td>0분</td>
+          <td>0분</td>
+          <td>60분</td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+      <tr>
+        <th scope="row">총 시간</th>
+        <td>60분</td>
+        <td>90분</td>
+        <td>120분</td>
+      </tr>
+    </table>
+    <br />
+    <table>
+      <!-- colspan : 열 병합, rowspan : 행 병합 -->
+      <tr>
+        <td>1</td>
+        <td colspan="2">2</td>
+        <!-- 몇 칸을 가져갈 지 작성 후 넘어가는 테이블 삭제 -->
+        <td>1</td>
+      </tr>
+      <tr>
+        <td rowspan="3">3</td>
+        <!-- 행 삭제는 다른 tr 에서 삭제 -->
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td colspan="2" rowspan="2">4</td>
+      </tr>
+      <tr>
+        <td>1</td>
+      </tr>
+    </table>
+    <br />
+    <table>
+      <colgroup>
+        <col class="weekend" />
+        <col span="5" />
+        <col class="weekend" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">일</th>
+          <th scope="col">월</th>
+          <th scope="col">화</th>
+          <th scope="col">수</th>
+          <th scope="col">목</th>
+          <th scope="col">금</th>
+          <th scope="col">토</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+        <tr>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+        <tr>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+        <tr>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
