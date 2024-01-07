@@ -1,0 +1,28 @@
+.p_1 {
+  /* left, center, right, justify */
+  text-align: left;
+  /* 문자 간의 간격 */
+  letter-spacing: 0;
+  /* 스페이스 바의 간격, 글꼴마다 간격이 다르므로 em 이 권장 */
+  word-spacing: 0.2em;
+  /* 각 줄 간의 높이 간격 설정 */
+  line-height: 1.5em;
+  /* 들여쓰기, 내어쓰기 / 글꼴, 크기에 따라 상대적이므로 em 권장 */
+  text-indent: 0.5em;
+}
+
+ul {
+  list-style: circle;
+}
+
+ul > li:first-child {
+  list-style: "😉";
+}
+
+ul > li:last-child {
+  list-style: url(https://showcases.yalco.kr/html-css/02-03/yalco.png);
+}
+
+ol {
+  list-style: lower-greek;
+}
