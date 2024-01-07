@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 공부</title>
+    <style>
+      .style-1 {
+        color: olivedrab;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>CSS를 적용하는 세 가지 방법</h1>
+
+    <p>
+      <!-- b 태그 안에 style 이라는 속성을 이용하여 글자 색을 입힐 수 있음
+      라인 안에 넣는다고 해서 인라인 스타일이라고 함, 잘 사용하지 않는 방법 -->
+      <b style="color: tomato"> 인라인 스타일(inline style) </b>
+      방식은 HTML 태그마다 style 속성으로 CSS 코드를 넣어주는 방식입니다. <br />
+      여러 요소들에 공통 속성을 재사용하여 부여할 수 없고 HTML 코드와 CSS 코드가
+      분리되지 않기 때문에 <br />
+      특별한 경우를 제외하고는 사용되지 않습니다.
+    </p>
+    <p>
+      <!-- head 태그 안에 style 태그로 css 코드를 적용시키는 것
+      이 방식으로는 해당 페이지 내부의 반복되는 요소들을 일괄적으로 처리 가능
+      재사용성이 떨어지기 때문에 반복되지 않는 페이지에서 짧은 문서일 때 사용 -->
+      <b class="style-1">내부 스타일 시트(internal style sheet)</b> 방식은 head
+      태그 안에 style 태그를 두고 그 안에 CSS 코드를 작성하는 방식입니다. <br />
+      HTML과 CSS의 전체 코드량이 많지 않고 CSS가 해당 HTML 문서에서만 적용될
+      경우 <br />
+      유용하게 사용될 수 있습니다.
+    </p>
+    <p>
+      <!-- css 파일을 외부로 분리해두는 것
+      html 과 css 를 분리하여 사용, 하나의 css 파일을 여러 곳에서 사용 가능
+      현재 가장 많이 사용하는 방식 -->
+      <b class="style-2">링킹 스타일 시트(linking style sheet)</b> 방식은 외부의
+      CSS 파일을 HTML 문서에 연결하는 것입니다. <br />
+      HTML과 CSS의 코드가 분리되고 CSS 코드를 여러 HTML 파일에서 공통으로 사용할
+      수 있으므로 <br />
+      가장 널리 사용되는 방식입니다.
+    </p>
+    <hr />
+
+    <h1>기본 & 그룹 선택자</h1>
+
+    <span> span 요소 </span>
+
+    <p>p 요소</p>
+
+    <p class="blue">p 요소, class는 blue</p>
+
+    <span class="blue"> span 요소, class는 blue </span>
+    <!-- blue 와 dark 라는 클래스를 둘 다 갖고 있음 -->
+    <p class="blue dark">p 요소, class는 blue와 dark</p>
+
+    <p class="blue" id="red">p 요소, class는 blue, id는 red</p>
+  </body>
+</html>
