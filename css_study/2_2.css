@@ -1,0 +1,20 @@
+.p_1 {
+  font-style: normal;
+  font-style: italic; /* 기울임 글꼴 */
+  font-weight: normal;
+}
+
+div {
+  font-size: 100%;
+}
+
+.p_2 {
+  text-decoration: overline wavy tomato 2px;
+  /* capitalize, uppercase, lowercase */
+  text-transform: uppercase;
+}
+
+.p_3 {
+  /* 우측, 하단, 그림자의 번지는 정도, 색상 */
+  text-shadow: 2px 2px 6px #86d9f7;
+}
