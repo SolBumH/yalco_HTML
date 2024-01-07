@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 공부</title>
+  </head>
+  <body>
+    <h1>텍스트 관련 인풋 타입</h1>
+
+    <form action="#">
+      <label for="txtIp">text</label> <br />
+      <!-- placeholder : 빈칸에 들어갈 안내 메세지 
+        maxlength : 최대 글자 수 -->
+      <input id="txtIp" type="text" placeholder="8자 이하" maxlength="8" />
+      <br /><br />
+
+      <label for="pwdIp">password</label> <br />
+      <!-- type="password" : 입력 시 텍스트 자동으로 가려줌
+        minlength : 글자의 최소 글자 수, 위반 시 submit 불가 -->
+      <input id="pwdIp" type="password" placeholder="4자 이상" minlength="4" />
+      <br /><br />
+      <!-- type="search" : 입력 시 칸에 X 버튼 등 브라우저 마다 버튼 생성 -->
+      <label for="srchIp">search</label> <br />
+      <input id="srchIp" type="search" />
+      <br /><br />
+      <!-- type="tel" : 모바일의 경우 자동으로 숫자 키패드가 팝업됨 -->
+      <label for="tlIp">tel</label> <br />
+      <input id="tlIp" type="tel" />
+      <br /><br />
+      <button type="submit">제출</button>
+    </form>
+    <br />
+    <h1>숫자 관련 인풋 타입</h1>
+
+    <form action="#">
+      <label for="numIp">number</label> <br />
+      <input id="numIp" type="number" min="0" max="10" />
+      <br /><br />
+      <!-- type="range" : 게이지 바 모양으로 생성 -->
+      <label for="rgIp">range</label> <br />
+      <input id="rgIp" type="range" min="0" max="100" step="20" />
+      <br /><br />
+
+      <label for="dtIp">date</label> <br />
+      <input id="dtIp" type="date" min="2020-01-01" max="2030-12-31" />
+      <br /><br />
+    </form>
+  </body>
+</html>
