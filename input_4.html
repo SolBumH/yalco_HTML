@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>인풋 요소 공통(대부분) 속성</h1>
+
+    <form action="#">
+      <!-- value : input 창에 원하는 값을 기본 작성되어 있게 설정 가능 -->
+      <label for="valIp">value</label> <br />
+      <input id="valIp" type="text" value="지정됨" />
+      <br /><br />
+
+      <!-- autofocus : 창 접속, 새로고침 시 커서가 있는 위치 설정 가능 -->
+      <label for="afIp">autofocus</label> <br />
+      <input id="afIp" type="text" placeholder="자동 포커스됨" autofocus />
+      <br /><br />
+
+      <!-- readonly : 값을 읽기만 가능하고 수정 불가, 제출 시 작성된 내용 전송됨, disabled 와 다름 -->
+      <label for="roIp">readonly</label> <br />
+      <input id="roIp" type="text" value="읽기만 가능, 전송됨" readonly />
+      <br /><br />
+
+      <!-- required : 해당 칸은 필수로 작성되어야 함 -->
+      <label for="rqIp">required</label> <br />
+      <input id="rqIp" type="text" placeholder="필수입력!" required />
+      <br /><br />
+
+      <!-- disabled : input 칸 자체가 작성이 되지 않게 비활성화 -->
+      <label for="daIp">disabled</label> <br />
+      <input id="daIp" type="text" placeholder="입력불가, 전송 안됨" disabled />
+      <br /><br />
+
+      <input type="radio" name="fruit" id="f_apple" value="apple" checked />
+      <label for="f_apple">사과</label>
+      <input type="radio" name="fruit" id="f_grape" value="grape" />
+      <label for="f_grape">포도</label>
+      <input type="radio" name="fruit" id="f_orange" value="orange" disabled />
+      <label for="f_orange">오렌지(품절)</label>
+      <br />
+
+      <br /><br />
+
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>
