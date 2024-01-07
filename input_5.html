@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 공부</title>
+  </head>
+  <body>
+    <!-- textarea : 긴 글을 받을 떄 사용, ex) 글 쓰기의 본문
+    cols : 한 줄에 글자의 갯수 설정, rows : 글 쓰기 칸이 한번에 보여줄 줄 수 
+    textarea 의 기본 값은 태그 사이에 적어둬야 함 -->
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <hr />
+    <h1>옵션들을 사용하는 태그</h1>
+
+    <h2>select, option 태그</h2>
+    <!-- select : 여러 옵션을 고를 수 있게 하는 태그, 태그 안에 option 태그를 사용하여 작성
+    option : select 할 수 있는 태그, value 로 실제 서버에 보낼 값 작성, 태그 사이에 사용자에게 보여질 값 작성
+    selected : 화면 첫 입장 시 기본으로 select 되어 있을 값 설정, checkbox 의 checked 옵션과 같음
+    select 태그에 multiple 옵션을 사용하여 여러 개를 선택할 수 있도록 설정도 가능, 하지만 거의 사용 X -->
+    <label for="lang">언어</label> <br />
+    <select id="lang">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">자바스크립트</option>
+      <option value="ts">타입스크립트</option>
+      <option value="" selected>-- 언어 선택 --</option>
+    </select>
+
+    <br /><br />
+
+    <h2>optgroup 태그</h2>
+    <!-- select 안에 optgroup 태그를 이용하여 옵션 별로 그룹을 형성할 수 있음 -->
+    <label for="shopping">쇼핑 목록</label> <br />
+    <select id="shopping">
+      <optgroup label="과일">
+        <option value="f_apl">사과</option>
+        <option value="f_grp">포도</option>
+        <option value="f_org">오렌지</option>
+      </optgroup>
+      <optgroup label="채소">
+        <option value="v_crt">당근</option>
+        <option value="v_tmt">토마토</option>
+        <option value="v_ept">가지</option>
+      </optgroup>
+      <optgroup label="육류">
+        <option value="m_bef">소고기</option>
+        <option value="m_prk">돼지고기</option>
+        <option value="m_ckn">닭고기</option>
+      </optgroup>
+    </select>
+
+    <br /><br />
+
+    <h2>datalist 태그</h2>
+    <!-- 칸 자체는 input 이지만 input 안에 여러 리스트의 값을 집어넣어 사용자가 해당 내용을 선택 or 직접 작성할 수 있게 함 -->
+    <label for="job">현재 직업</label> <br />
+    <input id="job" list="jobs" />
+    <datalist id="jobs">
+      <option value="학생"></option>
+      <option value="디자이너"></option>
+      <option value="퍼블리셔"></option>
+      <option value="개발자"></option>
+    </datalist>
+    <hr />
+    <h1>정도를 표현하는 태그</h1>
+
+    <h2>progress 태그</h2>
+    <!-- max : 값의 최대 수치를 설정 기본 값은 1 
+    value : 현재 게이지 바가 얼마나 채워졌는지 변경 가능 -->
+    <progress id="progressBar" max="100">0%</progress>
+    <button id="prgStartBtn" type="button">시작</button>
+
+    <br /><br />
+
+    <h2>meter 태그</h2>
+    <!-- meter 에는 min 과 max 를 명시해야 함
+    low, high : min 과 max 사이의 값을 세등분으로 나눌 수 있음 
+    optimum : 가장 이상적인 값이 어디에 위치하는지 결정 
+    value : meter 의 값 설정 -->
+    <meter min="0" max="100" low="33" high="67" optimum="50" value="20">
+      20달러
+    </meter>
+
+    <meter min="0" max="100" low="33" high="67" optimum="50" value="50">
+      50달러
+    </meter>
+
+    <meter min="0" max="100" low="33" high="67" optimum="50" value="80">
+      80달러
+    </meter>
+
+    <br />
+
+    <meter min="0" max="100" low="33" high="67" optimum="10" value="20">
+      20달러
+    </meter>
+
+    <meter min="0" max="100" low="33" high="67" optimum="10" value="50">
+      50달러
+    </meter>
+
+    <meter min="0" max="100" low="33" high="67" optimum="10" value="80">
+      80달러
+    </meter>
+
+    <br />
+
+    <meter min="0" max="100" low="33" high="67" optimum="90" value="20">
+      20달러
+    </meter>
+
+    <meter min="0" max="100" low="33" high="67" optimum="90" value="50">
+      50달러
+    </meter>
+
+    <meter min="0" max="100" low="33" high="67" optimum="90" value="80">
+      80달러
+    </meter>
+  </body>
+</html>
