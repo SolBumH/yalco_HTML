@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 공부</title>
+  </head>
+  <body>
+    <h1>체크 관련 인풋 타입</h1>
+    <form action="#">
+      <h2>checkbox</h2>
+      <!-- 체크박스는 레이블이 뒤에 오는 것이 특징 
+      checked 옵션은 페이지 로딩 시 체크가 되어 있을 지 여부 결정-->
+      <input id="cbIp" type="checkbox" checked />
+      <label for="cbIp">유기농</label> <br />
+
+      <h2>radio</h2>
+      <!-- 묶음 별 하나만 선택 가능하게 하는 것, name 이 같은 구성원끼리 한 묶음
+      value : 서버에 넘어갈 때 어떤 값이 넘어가는 지 적어두는 항목 -->
+      <input type="radio" name="fruit" id="f_apple" value="apple" checked />
+      <label for="f_apple">사과</label>
+      <input type="radio" name="fruit" id="f_grape" value="grape" />
+      <label for="f_grape">포도</label>
+      <input type="radio" name="fruit" id="f_orange" value="orange" />
+      <label for="f_orange">오렌지</label>
+      <br />
+
+      <input type="radio" name="vege" id="v_carrot" value="carrot" checked />
+      <label for="v_carrot">당근</label>
+      <input type="radio" name="vege" id="v_tomato" value="tomato" />
+      <label for="v_tomato">토마토</label>
+      <input type="radio" name="vege" id="v_eggplant" value="eggplant" />
+      <label for="v_eggplant">가지</label>
+    </form>
+
+    <h1>기타 인풋 타입</h1>
+    <form action="#">
+      <!-- type="file" : 파일을 첨부할 때 사용
+      accept : 받아들일 수 있는 파일 형식, multiple : 여러 개의 파일 업로드 가능 여부 -->
+      <label for="fileIp">file</label> <br />
+      <input id="fileIp" type="file" accept="image/png, image/jpeg" multiple />
+      <br /><br />
+      <!-- type="hidden" : 사용자에게는 보여지지 않지만 전송이 필요한 사항을 적어둘 떄 사용, 원본보기에서는 확인 가능 -->
+      <label for="hdnIp">hidden</label> <br />
+      <input id="hdnIp" type="hidden" />
+    </form>
+
+    <br />
+    <hr />
+    <br />
+
+    <form action="#">
+      <!-- type="email" : 작성된 내용이 이메일 형식인지 체크, 섬세한 체크는 어려움 -->
+      <label for="emlIp">email</label> <br />
+      <input id="emlIp" type="email" />
+      <br /><br />
+      
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>
