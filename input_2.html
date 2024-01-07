@@ -31,17 +31,21 @@
       <button type="submit">제출</button>
     </form>
     <br />
-    <h1>숫자 관련 인풋 타입</h1>
 
+    <h1>숫자 관련 인풋 타입</h1>
     <form action="#">
+      <!-- type="number" : 숫자만 입력 가능, min, max 최소, 최댓값 설정 가능 -->
       <label for="numIp">number</label> <br />
       <input id="numIp" type="number" min="0" max="10" />
       <br /><br />
-      <!-- type="range" : 게이지 바 모양으로 생성 -->
+      <!-- type="range" : 게이지 바 모양으로 생성 
+      min : 최소 수치, max : 최대 수치, step : 단계 별 이동 수치 
+      자바스크립트를 이용하여 현재 값, 최소, 최대 수치 등을 설정하여 사용 -->
       <label for="rgIp">range</label> <br />
       <input id="rgIp" type="range" min="0" max="100" step="20" />
       <br /><br />
-
+      <!-- type="date" : 날짜 타입으로 생성
+      min : 최소 날짜, max : 최대 날짜 -->
       <label for="dtIp">date</label> <br />
       <input id="dtIp" type="date" min="2020-01-01" max="2030-12-31" />
       <br /><br />
